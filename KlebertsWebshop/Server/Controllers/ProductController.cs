@@ -29,4 +29,11 @@ public class ProductController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("category/{categoryUrl}")]
+    public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProductByCategory(string categoryUrl)
+    {
+        var result = await _productService.GetProductsByCategoryAsync(categoryUrl);
+        return Ok(result);
+    }
+
 }
