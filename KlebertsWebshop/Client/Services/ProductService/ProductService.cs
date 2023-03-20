@@ -14,19 +14,26 @@ namespace KlebertsWebshop.Client.Services.ProductService
 
         public List<Product> Products { get; set; } = new();
 
+        public event Action ProductsChanged;
+
         public async Task<ServiceResponse<Product>> GetProduct(int productId)
         {
-            var result = 
+            var result =
                 await _http.GetFromJsonAsync<ServiceResponse<Product>>($"api/product/{productId}");
             return result;
         }
 
-        public async Task GetProducts()
+        public async Task GetProducts(string? categoryUrl = null)
         {
-            var result =
-                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/product");
+            var result = categoryUrl == null ?
+                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/product") :
+                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>($"api/product/category/{categoryUrl}");
             if (result != null && result.Data != null)
                 Products = result.Data;
+
+            ProductsChanged.Invoke();
         }
+
+
     }
 }
