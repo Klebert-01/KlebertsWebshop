@@ -58,7 +58,8 @@ public class DataContext : DbContext
                     Title = "Brave new world",
                     Description = "Brave New World is a dystopian novel by English author Aldous Huxley, written in 1931 and published in 1932. Largely set in a futuristic World State, whose citizens are environmentally engineered into an intelligence-based social hierarchy, the novel anticipates huge scientific advancements in reproductive technology, sleep-learning, psychological manipulation and classical conditioning that are combined to make a dystopian society which is challenged by the story's protagonist. Huxley followed this book with a reassessment in essay form, Brave New World Revisited (1958), and with his final novel, Island (1962), the utopian counterpart. This novel is often compared to George Orwell's Nineteen Eighty-Four (1949).",
                     ImageUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/BraveNewWorld_FirstEdition.jpg/220px-BraveNewWorld_FirstEdition.jpg",
-                    CategoryId= 1
+                    CategoryId= 1,
+                    Featured = true
                 },
                 new Product
                 {
@@ -75,7 +76,8 @@ public class DataContext : DbContext
                     Title = "Shantaram",
                     Description = "Shantaram is a 2003 novel by Gregory David Roberts, in which a convicted Australian bank robber and heroin addict escapes from Pentridge Prison and flees to India. The novel is commended by many for its vivid portrayal of life in Bombay in the early to late 1980s. The novel is reportedly influenced by real events in the life of the author, though some claims made by Roberts are contested by others involved in the story.",
                     ImageUrl = "https://upload.wikimedia.org/wikipedia/en/b/b9/GDR_Shantaram.jpg",
-                    CategoryId = 1
+                    CategoryId = 1,
+                    Featured = true
                 },
                 new Product
                 {
@@ -92,6 +94,7 @@ public class DataContext : DbContext
                     Title = "Back to the Future",
                     Description = "Back to the Future is a 1985 American science fiction film directed by Robert Zemeckis. Written by Zemeckis and Bob Gale, it stars Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover, and Thomas F. Wilson. Set in 1985, the story follows Marty McFly (Fox), a teenager accidentally sent back to 1955 in a time-traveling DeLorean automobile built by his eccentric scientist friend Doctor Emmett \"Doc\" Brown (Lloyd). Trapped in the past, Marty inadvertently prevents his future parents' meeting—threatening his very existence—and is forced to reconcile the pair and somehow get back to the future.",
                     ImageUrl = "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg",
+                    Featured = true
                 },
                 new Product
                 {
@@ -118,6 +121,7 @@ public class DataContext : DbContext
                     Title = "Diablo II",
                     Description = "Diablo II is an action role-playing hack-and-slash computer video game developed by Blizzard North and published by Blizzard Entertainment in 2000 for Microsoft Windows, Classic Mac OS, and macOS.",
                     ImageUrl = "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png",
+                    Featured = true
                 },
                 new Product
                 {

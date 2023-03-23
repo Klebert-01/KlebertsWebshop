@@ -1,4 +1,6 @@
-﻿namespace KlebertsWebshop.Server.Services.ProductService
+﻿using KlebertsWebshop.Shared;
+
+namespace KlebertsWebshop.Server.Services.ProductService
 {
     public interface IProductService
     {
@@ -8,8 +10,10 @@
 
         Task<ServiceResponse<List<Product>>> GetProductsByCategoryAsync(string categoryUrl);
 
-        Task<ServiceResponse<List<Product>>> SearchProducts(string searchText);
+        Task<ServiceResponse<ProductSearchResultDTO>> SearchProducts(string searchText, int page);
         Task<ServiceResponse<List<string>>> GetProductSearchSuggestions(string searchText);
+
+        Task<ServiceResponse<List<Product>>> GetFeaturedProducts();
 
     }
 }

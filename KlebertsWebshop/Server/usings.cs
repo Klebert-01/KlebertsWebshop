@@ -5,3 +5,7 @@ global using Microsoft.EntityFrameworkCore;
 global using KlebertsWebshop.Server.Data;
 global using KlebertsWebshop.Server.Services.ProductService;
 global using KlebertsWebshop.Server.Services.CategoryService;
+global using KlebertsWebshop.Server.Services.CartService;
+//global using KlebertsWebshop.Client.Services.CartService;
+
+
